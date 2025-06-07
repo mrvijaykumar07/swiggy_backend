@@ -25,6 +25,14 @@ app.use((req, res, next) => {
   next();
 });
 
+
+
+
+app.get("/", (req, res) => {
+  res.send("Swiggy backend proxy is running!");
+});
+
+
 // Route to get restaurant list
 app.get("/api/swiggy", async (req, res) => {
   const { lat, lng } = req.query;
